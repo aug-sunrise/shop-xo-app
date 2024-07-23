@@ -10,7 +10,7 @@
                 request_url: 'https://shop.augsunrise.com/',
 
                 // 静态资源地址（如系统根目录不在public目录下面请在静态地址后面加public目录、如：https://d1.shopxo.vip/public/）
-                static_url: 'https://shop.augsunrise.com/',
+                static_url: 'https://shop.augsunrise.com/public/',
 
                 // 系统类型（默认default、如额外独立小程序、可与程序分身插件实现不同主体小程序及支付独立）
                 system_type: 'default',
@@ -88,7 +88,7 @@
                 // 是否开启微信隐私弹窗授权提示、仅首页展示（0否, 1是）
                 is_weixin_privacy_setting: 1,
                 weixin_privacy_setting_timer: null,
-                
+
                 // 弹出获取用户当前位置（0否, 1是）
                 get_user_location_status: 0,
                 get_user_location_timer: null,
@@ -1319,7 +1319,7 @@
                                         if (res.data.code == -10000) {
                                             self.data.common_data_init_status = 1;
                                         }
-                            
+
                                         // 首次则再次初始化配置、站点关闭状态则不处理
                                         if ((status || 0) == 0 && self.data.common_data_init_status == 0) {
                                             self.init_config(1, object, method, params);
